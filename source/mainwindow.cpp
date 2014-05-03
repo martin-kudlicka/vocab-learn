@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QFileDialog>
 #include <QtCore/QTime>
 
 const QString FORMAT_TEXT = "<center style=\"font-size:xx-large\">%1</center>";
@@ -14,7 +14,7 @@ MainWindow::~MainWindow()
 	_sSettings.SetWindowWidth(geometry().width());
 } // ~MainWindow
 
-MainWindow::MainWindow(QWidget *parent /* 0 */, Qt::WFlags flags /* 0 */) : QMainWindow(parent, flags)
+MainWindow::MainWindow(QWidget *parent /* 0 */, Qt::WindowFlags flags /* 0 */) : QMainWindow(parent, flags)
 {
 	_iCurrentWord = -1;
 	_iTimerRepeat = 0;
